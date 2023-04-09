@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #741B08;
+}
+
+.container{
+    width: 1200px;
+    height: 100vh;
+}
+
+.general{
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.general .rng{
+  position: absolute;
+  cursor: pointer;  
+  z-index:1;
+  top: 300px;
+}
+
+.general .photo .phot{
+    width: 100%;
+    height: 700px;
+    position: absolute;
+}
+
+.general .last{
+    left: 0;
+}
+
+.general .next{
+    right: 0;
+}
