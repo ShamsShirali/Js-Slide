@@ -3,7 +3,7 @@
 let last=document.querySelector('.last');
 let next=document.querySelector('.next');
 
-last.addEventListener('click',()=>{
+function lastBtn(){
     let activeImage=document.querySelector('.active');
 
     if(activeImage.previousElementSibling!=null){
@@ -14,19 +14,25 @@ last.addEventListener('click',()=>{
      activeImage.classList.remove('active');
      activeImage.parentNode.lastElementChild.classList.add('active');
     }
+}
 
-    console.log('hello');
-});
+function nextBtn(){
+    let activeImage=document.querySelector('.active');
+ 
+    if(activeImage.nextElementSibling!=null){
+     activeImage.classList.remove('active');
+     activeImage.nextElementSibling.classList.add('active');
+    }
+    else{
+     activeImage.classList.remove('active');
+     activeImage.parentNode.firstElementChild.classList.add('active');
+    }
+ }
 
-next.addEventListener('click',()=>{
-   let activeImage=document.querySelector('.active');
+last.addEventListener('click',lastBtn);
 
-   if(activeImage.nextElementSibling!=null){
-    activeImage.classList.remove('active');
-    activeImage.nextElementSibling.classList.add('active');
-   }
-   else{
-    activeImage.classList.remove('active');
-    activeImage.parentNode.firstElementChild.classList.add('active');
-   }
-});
+next.addEventListener('click',nextBtn);
+
+setInterval(()=>{
+    nextBtn();
+},4000);
