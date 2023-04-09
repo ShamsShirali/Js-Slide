@@ -10,32 +10,45 @@ body{
 
 .container{
     width: 1200px;
-    height: 100vh;
 }
 
 .general{
     width: 100%;
-    height: 800px;
+    height: 700px;
     position: relative;
+    padding-top: 20px;
 }
 
 .general .rng{
   position: absolute;
   cursor: pointer;  
   z-index:1;
-  top: 300px;
+  top: 350px;
+  color: white;
+  font-size: 30px;
+}
+
+.general .photo{
+    width: 100%;
+    height: 700px;
 }
 
 .general .photo .phot{
     width: 100%;
     height: 700px;
     position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .general .last{
-    left: 0;
+    left: 20px;
 }
 
 .general .next{
-    right: 0;
+    right: 20px;
+}
+
+.active{
+    opacity: 1 !important;
 }
