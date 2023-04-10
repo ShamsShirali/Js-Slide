@@ -52,3 +52,18 @@ body{
 .active{
     opacity: 1 !important;
 }
+
+.inverval{
+    width: 100%;
+    height: 10px;
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.inverval .time{
+    width: 0px;
+    height: 10px;
+    background-color: green;
+    transition: all 6s;
+    border-radius: 4px;
+}
